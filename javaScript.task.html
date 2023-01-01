@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>JavaScript Task</title>
+</head>
+
+<body>
+    <h1>Gifts JavaScript task </h1>
+    <h2>My button that says hello world</h2>
+    <button id="hello">Try it</button>
+    <script>
+        document.getElementById("hello").addEventListener("click", function () {
+            console.log("Hello World!");
+        });
+    </script>
+    <h3> My button that changes background color </h3>
+    <button id="color"> change background color </button>
+    <script>
+        document.getElementById("color").addEventListener("click", function blue() {
+            document.body.style.background = "skyblue";
+        });
+        
+    </script>
+    <h4>My even or odd number form</h4>
+    <form>
+        <input type="number" id="aufenthaltstitel">
+        <button id="knopf">click me</button>
+        <script>
+            document.getElementById("knopf").addEventListener("click", function () {
+                const value = document.getElementById("aufenthaltstitel").value;
+                isEven(value);
+            });
+            function isEven(number) {
+                if (number % 2 == 0) {
+                    alert(number + " is an even number!");
+                } else {
+                    alert(number + " is an odd number!");
+                }
+            }
+        </script>
+    </form>
+    <h5>My ToDo list</h5>
+    <input type="text" id="text">
+    <button id="addTask">Add Task</button>
+    <ol id="thingy">
+    </ol>
+    <script>
+        document.getElementById("addTask").addEventListener("click", function () {
+            const value = document.getElementById("text").value;
+            if (value !== "") {
+                const list = document.getElementById("thingy");
+                const entry = document.createElement('li');
+                entry.appendChild(document.createTextNode(value));
+                list.appendChild(entry);
+            } else {
+                alert("The task input is empty. Please fill it in!");
+            }
+        });
+    </script>
+</body>
+
+</html>
