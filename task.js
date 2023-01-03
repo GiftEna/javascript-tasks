@@ -54,22 +54,18 @@ function javascriptIsFun(n) {
 //javascriptIsFun(4);
 
 function power(a, b) {
-    let sum = 0;
-    let i = 0;
-    while (i < b) {
-        sum += a * a;
-        i++;
-    }
+    let sum = a ** b; 
     return sum
 }
 
-//console.log(power(2, 4))
+//console.log(power(5, 3))
 
 function lastDigit(n) {
     while (n >= 10) {
         return (n % 10);
     }
 }
+
 //console.log(lastDigit(1303839)
 
 //console.log(personObject.name);
@@ -96,10 +92,10 @@ function fizzBuzz() {
             continue;
         }
 
-        if ( i % 3 == 0) {
+        if (i % 3 == 0) {
             // console.log("Fizz");
             finalString += "Fizz, ";
-        } else if (i % 5 == 0){
+        } else if (i % 5 == 0) {
             finalString += "Buzz, ";
             //console.log("Buzz");
         } else {
